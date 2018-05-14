@@ -10,10 +10,12 @@ package projecto;
  * @author bseli
  */
 public class Tomada implements Atuadores {
+    
+    private boolean isLigado;
 
     @Override
     public void setIsLigado(boolean ligado) {
-   
+      this.isLigado = ligado;
     }
 
     @Override
