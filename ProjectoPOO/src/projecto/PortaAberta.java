@@ -10,5 +10,10 @@ package projecto;
  * @author bseli
  */
 public class PortaAberta implements Sensores {
+
+    @Override
+    public void setValor(double valor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
