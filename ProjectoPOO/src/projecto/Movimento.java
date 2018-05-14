@@ -11,9 +11,24 @@ package projecto;
  */
 public class Movimento implements Sensores {
 
+    public boolean movimento;
+    
+    public Movimento(){
+        movimento = false;
+    }
     @Override
     public void setValor(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       throw new IllegalArgumentException("");
+    }
+
+     @Override
+    public boolean temEnergia() {
+               return false;
+    }
+
+    @Override
+    public boolean getStatus() {
+        return movimento;
     }
     
 }

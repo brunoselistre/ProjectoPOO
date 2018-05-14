@@ -10,10 +10,22 @@ package projecto;
  * @author bseli
  */
 public class Temperatura implements Sensores {
-
+    
+   
+    
     @Override
     public void setValor(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         throw new IllegalArgumentException("");
+    }
+
+    @Override
+    public boolean temEnergia() {
+        return true;
+    }
+
+    @Override
+    public boolean getStatus() {
+        return false;
     }
     
     

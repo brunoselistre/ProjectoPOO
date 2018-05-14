@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package projecto;
 
 /**
@@ -10,10 +6,24 @@ package projecto;
  * @author bseli
  */
 public class PortaAberta implements Sensores {
-
+    
+    private boolean isAberto;
+    
+    
+    public PortaAberta(){
+        isAberto = false;
+    }
+    @Override
+    public boolean getStatus(){
+        return isAberto;
+    }
     @Override
     public void setValor(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new IllegalArgumentException("");
     }
     
+   @Override
+    public boolean temEnergia() {
+               return false;
+    }
 }

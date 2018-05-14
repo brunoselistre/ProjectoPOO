@@ -20,7 +20,7 @@ public class Tomada implements Atuadores {
 
     @Override
     public void setValor(double valor) {
-
+         throw new IllegalArgumentException("");
     }
     
 }
