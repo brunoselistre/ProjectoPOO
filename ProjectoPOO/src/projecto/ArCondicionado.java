@@ -21,7 +21,12 @@ public class ArCondicionado extends Consola implements Atuadores {
         temperatura = TEMPERATURA_MIN;
         isLigado = false;
     }
-    
+    public int getTempMin(){
+        return TEMPERATURA_MIN;
+    }
+    public int getTempMax(){
+        return TEMPERATURA_MAX;
+    }
     @Override
     public void setValor(double temperatura){
         if (temperatura >= TEMPERATURA_MIN && temperatura <= TEMPERATURA_MAX){

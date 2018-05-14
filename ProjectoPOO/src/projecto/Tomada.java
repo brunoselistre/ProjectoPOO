@@ -5,13 +5,18 @@
  */
 package projecto;
 
-/**
- *
- * @author bseli
- */
+/*
+* Projecto SmartHome 1.0
+* @author Bruno Selistre - 170221068
+* @author Bruno Luis - 170221066
+*/
 public class Tomada implements Atuadores {
     
     private boolean isLigado;
+    
+    public Tomada(){
+        isLigado = true;
+    }
 
     @Override
     public void setIsLigado(boolean ligado) {

@@ -5,14 +5,18 @@
  */
 package projecto;
 
-/**
- *
- * @author bseli
- */
+/*
+* Projecto SmartHome 1.0
+* @author Bruno Selistre - 170221068
+* @author Bruno Luis - 170221066
+*/
 public class Temperatura implements Sensores {
-    
+    public Tomada tomada;
    
-    
+    public Temperatura(){
+        //tomada.setIsLigado(boolean ligado);
+        
+    }
     @Override
     public void setValor(double valor) {
          throw new IllegalArgumentException("");
