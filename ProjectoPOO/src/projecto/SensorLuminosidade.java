@@ -10,27 +10,17 @@ package projecto;
 * @author Bruno Selistre - 170221068
 * @author Bruno Luis - 170221066
 */
-public class Temperatura implements Sensores {
-    public Tomada tomada;
-   
-    public Temperatura(){
-        //tomada.setIsLigado(boolean ligado);
-        
-    }
-    @Override
-    public void setValor(double valor) {
-         throw new IllegalArgumentException("");
-    }
+public class SensorLuminosidade implements Sensores {
 
     @Override
+    public void setValor(double valor) {}
+
     public boolean temEnergia() {
-        return true;
+               return false;
     }
 
     @Override
     public boolean getStatus() {
         return false;
     }
-    
-    
 }

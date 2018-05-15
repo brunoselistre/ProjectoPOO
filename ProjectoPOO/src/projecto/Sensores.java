@@ -11,7 +11,6 @@ package projecto;
  */
 public interface Sensores {
     
-    boolean temEnergia();
     void setValor(double valor);
     public boolean getStatus();
 

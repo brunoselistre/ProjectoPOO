@@ -11,12 +11,12 @@ package projecto;
  */
 public class ModuloTemperatura {
     public ArCondicionado arCondicionado;
-    public Temperatura sensorTemperatura;
+    public SensorTemperatura sensorTemperatura;
     public int temperatura;
     
     public ModuloTemperatura(){
         arCondicionado = new ArCondicionado();
-        sensorTemperatura = new Temperatura();
+        sensorTemperatura = new SensorTemperatura();
     }
     
     public int getTemperatura(){

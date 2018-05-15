@@ -3,21 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/ArCondicionado.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Atuadores.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Temperatura.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Camara.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Consola.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Sensores.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/CamaraDeVideo.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Luminosidade.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/main.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Divisao.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Lampada.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Tomada.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Alarme.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/PortaAberta.java</file>
-            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/ProjectoPOO/src/projecto/Movimento.java</file>
+            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/GIT/ProjectoPOO/ProjectoPOO/src/projecto/Movimento.java</file>
+            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/GIT/ProjectoPOO/ProjectoPOO/src/projecto/Programa.java</file>
+            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/GIT/ProjectoPOO/ProjectoPOO/src/projecto/PortaAberta.java</file>
+            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/GIT/ProjectoPOO/ProjectoPOO/src/projecto/ModuloAlarme.java</file>
+            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/GIT/ProjectoPOO/ProjectoPOO/src/projecto/Alarme.java</file>
+            <file>file:/C:/Users/bseli/Documents/NetBeansProjects/GIT/ProjectoPOO/ProjectoPOO/src/projecto/Camara.java</file>
         </group>
     </open-files>
 </project-private>

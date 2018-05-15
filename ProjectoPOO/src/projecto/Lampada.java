@@ -24,9 +24,13 @@ public class Lampada implements Atuadores{
         this.isLigado = ligado;
     }
 
+    public boolean isIsLigado() {
+        return isLigado;
+    }
+    
     @Override
     public void setValor(double luz) {
-      if(luz > LAMPADA_MIN && luz <= LAMPADA_MAX){
+      if(luz >= LAMPADA_MIN && luz <= LAMPADA_MAX){
          this.luz = luz;   
       }else {
           this.luz = 0.0;

@@ -12,10 +12,10 @@ package projecto;
 public class ModuloLuminosidade {
     
     public Tomada tomada;
-    public Luminosidade luz;
+    public SensorLuminosidade luz;
     
     public ModuloLuminosidade(){
-        luz = new Luminosidade();
+        luz = new SensorLuminosidade();
         tomada = new Tomada();
     }
     

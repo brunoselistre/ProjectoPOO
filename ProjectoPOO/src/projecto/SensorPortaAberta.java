@@ -6,23 +6,22 @@ package projecto;
 * @author Bruno Selistre - 170221068
 * @author Bruno Luis - 170221066
 */
-public class PortaAberta implements Sensores {
+public class SensorPortaAberta implements Sensores {
     
     private boolean isAberto;
+    private ModuloAlarme modulo;
     
-    public PortaAberta(){
+    public SensorPortaAberta(){
         isAberto = false;
     }
     @Override
     public boolean getStatus(){
         return isAberto;
     }
+    public void setStatus(boolean status){
+        this.isAberto = status;
+    }
     @Override
-    public void setValor(double valor) {
-    }
-    
-   @Override
-    public boolean temEnergia() {
-               return false;
-    }
+    public void setValor(double valor) {}
+   
 }
