@@ -5,6 +5,9 @@
  */
 package projecto;
 
+import java.time.LocalDateTime;
+import java.util.Iterator;
+
 /*
 * Projecto SmartHome 1.0
 * @author Bruno Selistre - 170221068
@@ -13,9 +16,11 @@ package projecto;
 public class Tomada implements Atuadores {
     
     private boolean isLigado;
+    private int temporizador;
     
     public Tomada(){
-        isLigado = true;
+        temporizador = LocalDateTime.now().getMinute();
+        isLigado = false;    
     }
 
     @Override
@@ -27,5 +32,16 @@ public class Tomada implements Atuadores {
     public void setValor(double valor) {
          throw new IllegalArgumentException("");
     }
-    
+    public void setTemporizador(int hora, TipoTemporizador tipo){       
+     
+        if(tipo == TipoTemporizador.LIGAR){
+            while(LocalDateTime.now().getHour() != hora){
+                isLigado = true;
+            }
+        }else if(tipo == TipoTemporizador.DESLIGAR){
+            while(LocalDateTime.now().getHour() != hora){
+                isLigado = false;
+            }
+        }
+    }
 }
