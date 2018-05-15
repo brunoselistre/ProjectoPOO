@@ -24,14 +24,15 @@ public class ModuloTemperatura {
     }
     
     public void medirTemperatura(int temp, int variacao){
+        while (temperatura != temp)
         if(temperatura < arCondicionado.getTempMin()){
             arCondicionado.setIsLigado(true);
         } else if(temperatura > arCondicionado.getTempMax()) {
             arCondicionado.setIsLigado(false);
-        }else if(temperatura > temp && temperatura < (temp +variacao) ){
-            
+        }else if(temperatura > (temp+variacao) || temperatura < (temp +variacao) ){
+            arCondicionado.setIsLigado(false);
+        }else if (temperatura < (temp+variacao) || temperatura > (temp -variacao)){
+            arCondicionado.setIsLigado(true);  
         }
-        
     }
     }
-}

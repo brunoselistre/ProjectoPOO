@@ -20,7 +20,7 @@ public class ModuloAlarme {
     public ModuloAlarme(){
         sensorMovimento = new SensorMovimento();
         sensorPortaAberta = new SensorPortaAberta();
-        camara = new Camara();
+        camara = new Camara("xxx");
         pin = "0000";
         isActivo = false;
         alarme = new Sirene();

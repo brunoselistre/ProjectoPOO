@@ -11,4 +11,17 @@ package projecto;
  */
 public class CamaraDeVideo extends Camara {
     
+    private String video;
+    
+    public CamaraDeVideo(String video) {
+        super(video);
+        this.video = video.concat(".mp4");
+    }
+
+    public String getVideo() {
+        return video;
+    }
+    
+    
+    
 }
