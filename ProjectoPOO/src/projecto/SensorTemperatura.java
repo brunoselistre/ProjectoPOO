@@ -22,7 +22,7 @@ public class SensorTemperatura implements Sensores {
     public SensorTemperatura(){
         tomada = new Tomada();
         isActivo = false;
-        modulo = new ModuloTemperatura();
+        modulo = new ModuloTemperatura(25);
         temperaturaAmbiente = generateNumber();
     }
     private int generateNumber() {

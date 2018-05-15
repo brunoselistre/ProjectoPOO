@@ -16,7 +16,7 @@ public class ModuloTemperatura {
     
     public ModuloTemperatura(int temperatura){
         arCondicionado = new ArCondicionado();
-        sensorTemperatura = new Temperatura();
+        sensorTemperatura = new SensorTemperatura();
     }
     
     public int getTemperatura(){
