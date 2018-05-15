@@ -11,17 +11,24 @@ package projecto;
  */
 public class ModuloLuminosidade {
     
+    public static final int POUCA_LUZ = 25;
+    public static final int MUITA_LUZ = 80;
     public Tomada tomada;
+    public Lampada lampada;
     public SensorLuminosidade luz;
     
     public ModuloLuminosidade(){
         luz = new SensorLuminosidade();
         tomada = new Tomada();
+        lampada = new Lampada();
     }
     
     public boolean ligarLuz(boolean ligado){
-        luz.equals(ligado);
+        lampada.setIsLigado(ligado);
         return ligado;
+    }
+    public void controleLampada(int potencia){
+        lampada.setValor(potencia);
     }
     
     public boolean ligarTomada(boolean ligado){
@@ -30,6 +37,10 @@ public class ModuloLuminosidade {
     }
     
     public void medirLuminosidade(){
-        
+        if(luz.luzAmbiente > MUITA_LUZ){
+            lampada.setIsLigado(false); //LAMPADA APAGADA
+        }else if (luz.luzAmbiente < POUCA_LUZ){
+            lampada.setIsLigado(true); //LAMPADA ACESA
+        }
     }
 }

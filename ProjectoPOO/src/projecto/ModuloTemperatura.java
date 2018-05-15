@@ -23,14 +23,12 @@ public class ModuloTemperatura {
        return temperatura; 
     }
     
-    public void medirTemperatura(int temp, int variacao){
-        if(temperatura < arCondicionado.getTempMin()){
+    public void definicaoTemperatura(int temp, int variacao){
+        if(sensorTemperatura.temperaturaAmbiente > temp + variacao ||sensorTemperatura.temperaturaAmbiente < temp - variacao){ //CORRIGIR!!!
             arCondicionado.setIsLigado(true);
-        } else if(temperatura > arCondicionado.getTempMax()) {
-            arCondicionado.setIsLigado(false);
-        }else if(temperatura > temp && temperatura < (temp +variacao) ){
-            
+            arCondicionado.setValor(temp);
         }
+        
     }
     
 }

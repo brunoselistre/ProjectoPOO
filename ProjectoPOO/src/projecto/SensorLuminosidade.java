@@ -5,22 +5,25 @@
  */
 package projecto;
 
+import java.util.Random;
+
 /*
 * Projecto SmartHome 1.0
 * @author Bruno Selistre - 170221068
 * @author Bruno Luis - 170221066
 */
 public class SensorLuminosidade implements Sensores {
+    
+    public static final int MAX_LUMINOSIDADE = 100;
+    public int luzAmbiente;
 
-    @Override
-    public void setValor(double valor) {}
-
-    public boolean temEnergia() {
-               return false;
+    public SensorLuminosidade(){
+        luzAmbiente = generateNumber();
     }
-
-    @Override
-    public boolean getStatus() {
-        return false;
+    
+    private int generateNumber() {
+        Random randomSequence = new Random();
+        return randomSequence.nextInt(MAX_LUMINOSIDADE) + 1;
     }
+   
 }

@@ -5,24 +5,31 @@
  */
 package projecto;
 
+import java.util.Random;
+
 /*
 * Projecto SmartHome 1.0
 * @author Bruno Selistre - 170221068
 * @author Bruno Luis - 170221066
 */
 public class SensorTemperatura implements Sensores {
+    public static final int MAX_TEMP = 20;
     public Tomada tomada;
-    public boolean status;
+    public boolean isActivo;
+    public int temperaturaAmbiente;
+    private ModuloTemperatura modulo;
    
     public SensorTemperatura(){
         tomada = new Tomada();
-        status = false;
-      
-        
+        isActivo = false;
+        modulo = new ModuloTemperatura();
+        temperaturaAmbiente = generateNumber();
     }
-    @Override
-    public void setValor(double valor) {}
-
+    private int generateNumber() {
+        Random randomSequence = new Random();
+        return randomSequence.nextInt(MAX_TEMP) + 15;
+    }
+    
     public boolean temEnergia() {
         if(tomada.getIsLigado() == true){
             return true;
@@ -31,18 +38,15 @@ public class SensorTemperatura implements Sensores {
         }
     }
 
-    public void setStatus(boolean isActivo) {
+    public void setIsActivo(boolean isActivo) {
         if(temEnergia() == true){
-            this.status = isActivo;
+            this.isActivo = isActivo;
         }else{
-            this.status = false;
+            this.isActivo = false;
         }
     }
-
-    @Override
-    public boolean getStatus() {
-        return status;
+    public boolean getIsActivo() {
+        return isActivo;
     }
-    
     
 }

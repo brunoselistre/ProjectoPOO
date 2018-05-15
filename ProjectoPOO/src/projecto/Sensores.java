@@ -11,7 +11,6 @@ package projecto;
  */
 public interface Sensores {
     
-    void setValor(double valor);
-    public boolean getStatus();
+    
 
 }

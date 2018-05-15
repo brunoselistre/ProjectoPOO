@@ -14,14 +14,11 @@ public class SensorPortaAberta implements Sensores {
     public SensorPortaAberta(){
         isAberto = false;
     }
-    @Override
     public boolean getStatus(){
         return isAberto;
     }
     public void setStatus(boolean status){
         this.isAberto = status;
     }
-    @Override
-    public void setValor(double valor) {}
-   
+    
 }

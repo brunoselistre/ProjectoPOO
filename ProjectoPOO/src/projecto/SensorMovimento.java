@@ -13,10 +13,7 @@ public class SensorMovimento implements Sensores {
     public SensorMovimento(){
         isActivo = false;
     }
-    @Override
-    public void setValor(double valor) {}
-
-    @Override
+    
     public boolean getStatus() {
         return isActivo;
     }
