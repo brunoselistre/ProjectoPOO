@@ -52,8 +52,6 @@ public class ModuloAlarme {
     }
     
     public void acionarSensores(){
-        sensorMovimento.setStatus(true);
-        sensorPortaAberta.setStatus(false);
-    }
+    } 
     
 }

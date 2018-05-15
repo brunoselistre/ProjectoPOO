@@ -5,21 +5,23 @@
 */
 package projecto;
 
+import java.util.Random;
+
 
 public class SensorMovimento implements Sensores {
 
     public boolean isActivo;
     
     public SensorMovimento(){
-        isActivo = false;
+        isActivo = generateStatus();
     }
     
     public boolean getStatus() {
         return isActivo;
     }
     
-    public void setStatus(boolean status){
-        this.isActivo = status;
+    private boolean generateStatus() {
+        Random randomSequence = new Random();
+        return randomSequence.nextBoolean();
     }
-    
 }

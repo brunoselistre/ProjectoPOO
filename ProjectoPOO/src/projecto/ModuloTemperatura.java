@@ -35,4 +35,4 @@ public class ModuloTemperatura {
             arCondicionado.setIsLigado(true);  
         }
     }
-    }
+}
