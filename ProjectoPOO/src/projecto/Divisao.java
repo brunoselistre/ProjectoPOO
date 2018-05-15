@@ -5,10 +5,24 @@
  */
 package projecto;
 
-/**
- *
- * @author bseli
- */
+/*
+* Projecto SmartHome 1.0
+* @author Bruno Selistre - 170221068
+* @author Bruno Luis - 170221066
+*/
 public class Divisao {
     
+    private TipoDivisao divisao;
+    private ModuloLuminosidade luz;
+    private ModuloAlarme alarme;
+    private ModuloTemperatura temperatura;
+    
+    public Divisao(ModuloLuminosidade luz ,ModuloAlarme alarme,ModuloTemperatura temperatura, TipoDivisao divisao ){
+        luz = new ModuloLuminosidade(luz.luz);
+        alarme = new ModuloAlarme();
+        temperatura = new ModuloTemperatura(temperatura.sensorTemperatura);
+        this.divisao = divisao;
+    }   
+    
+  
 }

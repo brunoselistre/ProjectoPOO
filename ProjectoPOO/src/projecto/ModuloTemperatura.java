@@ -5,33 +5,33 @@
  */
 package projecto;
 
-/**
- *
- * @author micol
- */
+/*
+* Projecto SmartHome 1.0
+* @author Bruno Selistre - 170221068
+* @author Bruno Luis - 170221066
+*/
 public class ModuloTemperatura {
     public ArCondicionado arCondicionado;
     public SensorTemperatura sensorTemperatura;
-    public int temperatura;
     
-    public ModuloTemperatura(int temperatura){
+    public ModuloTemperatura(SensorTemperatura temperatura){
         arCondicionado = new ArCondicionado();
-        sensorTemperatura = new SensorTemperatura();
+        sensorTemperatura = new SensorTemperatura(sensorTemperatura.temperatura);
     }
     
     public int getTemperatura(){
-       return temperatura; 
+       return sensorTemperatura.temperatura; 
     }
     
     public void medirTemperatura(int temp, int variacao){
-        while (temperatura != temp)
-        if(temperatura < arCondicionado.getTempMin()){
+        while (sensorTemperatura.temperatura != temp)
+        if(sensorTemperatura.temperatura < arCondicionado.getTempMin()){
             arCondicionado.setIsLigado(true);
-        } else if(temperatura > arCondicionado.getTempMax()) {
+        } else if(sensorTemperatura.temperatura > arCondicionado.getTempMax()) {
             arCondicionado.setIsLigado(false);
-        }else if(temperatura > (temp+variacao) || temperatura < (temp +variacao) ){
+        }else if(sensorTemperatura.temperatura > (temp+variacao) || sensorTemperatura.temperatura < (temp +variacao) ){
             arCondicionado.setIsLigado(false);
-        }else if (temperatura < (temp+variacao) || temperatura > (temp -variacao)){
+        }else if (sensorTemperatura.temperatura < (temp+variacao) || sensorTemperatura.temperatura > (temp -variacao)){
             arCondicionado.setIsLigado(true);  
         }
     }

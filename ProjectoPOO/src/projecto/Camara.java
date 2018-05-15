@@ -28,12 +28,7 @@ public class Camara implements Atuadores  {
 */
     public String getFoto() {
         return foto;
-    }
-   
-    public void tirarFotos(){
-        
-    }
-    
+    }    
     
     
     @Override

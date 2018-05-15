@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package projecto;
 
 /**
- *
- * @author micol
- */
+* Projecto SmartHome 1.0
+* @author Bruno Selistre - 170221068
+* @author Bruno Luis - 170221066
+*/
 public class ModuloLuminosidade {
     
     public static final int POUCA_LUZ = 25;
@@ -17,8 +14,8 @@ public class ModuloLuminosidade {
     public Lampada lampada;
     public SensorLuminosidade luz;
     
-    public ModuloLuminosidade(){
-        luz = new SensorLuminosidade();
+    public ModuloLuminosidade(SensorLuminosidade luz){
+        luz = new SensorLuminosidade(luz.luzAmbiente);
         tomada = new Tomada();
         lampada = new Lampada();
     }

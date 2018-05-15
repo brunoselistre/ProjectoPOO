@@ -16,9 +16,21 @@ public class SensorLuminosidade implements Sensores {
     
     public static final int MAX_LUMINOSIDADE = 100;
     public int luzAmbiente;
-
-    public SensorLuminosidade(){
-        luzAmbiente = generateNumber();
+/**
+ * Constructor onde vai receber a luz ambiente na divisão.
+ * 
+ * @param luzAmbiente
+ */
+    public SensorLuminosidade(int luzAmbiente){
+        this.luzAmbiente = luzAmbiente;
+    }
+/**
+ * Retorna a quantidade de luz colocada.
+ *
+ * @return luzAmbiente
+*/
+    public int getLuzAmbiente() {
+        return luzAmbiente;
     }
     
     private int generateNumber() {

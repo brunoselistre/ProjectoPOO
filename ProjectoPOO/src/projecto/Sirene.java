@@ -38,7 +38,10 @@ public class Sirene implements Atuadores {
            throw new IllegalArgumentException("Valor Incorreto. Volume mínimo");
         }
     }
-    
+/**
+ * Desliga o volume da sirene
+ *
+*/
     public void volumeOFF(){
         this.volume = VOL_MIN;
     }
