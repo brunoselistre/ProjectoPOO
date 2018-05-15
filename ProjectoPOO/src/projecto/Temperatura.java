@@ -14,8 +14,7 @@ public class Temperatura implements Sensores {
     public Tomada tomada;
    
     public Temperatura(){
-        //tomada.setIsLigado(boolean ligado);
-        
+        tomada = new Tomada();
     }
     @Override
     public void setValor(double valor) {
