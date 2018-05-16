@@ -1,35 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projecto;
 
-/**
- *
- * @author bseli
- */
+/*
+* Projecto SmartHome 1.0
+* @author Bruno Selistre - 170221068
+* @author Bruno Luis - 170221066
+*/
 public class CamaraDeVideo extends Camara {
     
     private String video;
-/**
- * Constructor onde vai receber um video por nome de string e sempre adiciona automaticamente o tipo de ficheiro, que neste caso é sempre .mp4.
- * 
- * @param video 
- */
-    public CamaraDeVideo(String video) {
-        super(video);
-        this.video = video.concat(".mp4");
+    
+    public CamaraDeVideo() {
+        super();
     }
-/**
- * Retorna o valor de video implementado pelo  utilizador.
- *
- * @return video
-*/
+
     public String getVideo() {
         return video;
     }
-    
-    
-    
+    public void gravar(String name){
+        this.video = name.concat(".mp4");
+    }
+    public void tirarFoto(String name){
+        super.tirarFotos(name);
+    }
 }

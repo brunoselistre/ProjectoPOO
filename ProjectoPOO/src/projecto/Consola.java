@@ -11,13 +11,59 @@ public class Consola {
     
     private String nomeUtilizador;
     private String morada;
-    private int clienteNumero;
-    private HashMap<Divisao, Sensores> sensores;
-    private HashMap<Divisao, Atuadores> atuadores;
+    private ModuloAlarme alarme;
+    private ModuloLuminosidade luz;
+    private ModuloTemperatura temperatura;
+    private ArrayList<Divisao> divisao;
+        
+    public Consola(String nomeUtilizador,String morada){
+       this.nomeUtilizador = nomeUtilizador;
+       this.morada= morada;
+       divisao = new ArrayList<Divisao>();
+       luz = new ModuloLuminosidade();
+       alarme = new ModuloAlarme();
+       temperatura = new ModuloTemperatura();
+      }
     
-        
-    public Consola(){
-        clienteNumero = ++aux;
-        
+    public ModuloTemperatura mudarTemperatura(int temp, int variacao){
+        temperatura.medirTemperatura(temp, variacao);
+        return temperatura;
     }
+    
+    public void addDivisao(Divisao division){
+       divisao.add(division);
+    }
+    
+    public void removeDivisao(Divisao division){
+        if(divisao.equals(division)){
+            divisao.remove(division);
+        }
+    }
+    
+    public int getNummeroDivisoes(){
+        return divisao.size();
+    }
+    
+    public void ligarLamp(){
+        luz.ligarLampada(true);
+    }
+    
+    public void desligarLuz(){
+        luz.ligarLampada(false);
+    }
+    
+    public void autoLuz(int pouca, int muita){
+        luz.medirLuminosidade(pouca, muita);
+    }
+   
+    public  ModuloLuminosidade intensidadeLuz(double potencia){
+        luz.controleLampada(potencia);
+        return luz;
+    }
+    
+    public String toString(){
+        String str = "Temos " + divisao.size() + " divisões nesta casa.";
+        return str;
+    }
+    
 }

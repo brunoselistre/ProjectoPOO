@@ -1,6 +1,4 @@
-
 package projecto;
-
 /*
 * Projecto SmartHome 1.0
 * @author Bruno Selistre - 170221068
@@ -36,13 +34,20 @@ public class Lampada implements Atuadores{
         return isLigado;
     }
 /**
+ * Método que retorna o valor da lampada.
+ * @return luz
+ */    
+    public double getLuz(){
+        return luz;
+    }
+/**
  * Método onde vai definir o valor de luminosidade da lâmpada.
  * @param luz 
  */
     @Override
-    public void setValor(double luz) {
+    public void setValor(double potencia) {
       if(luz >= LAMPADA_MIN && luz <= LAMPADA_MAX){
-         this.luz = luz;   
+         this.luz = potencia;   
       }else {
           this.luz = 0.0;
           throw new IllegalArgumentException("A Lampada foi colocada com o valor pré-definido de 0, devido a valor incorrecto.");

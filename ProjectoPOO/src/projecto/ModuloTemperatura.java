@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projecto;
 
 /*
@@ -14,17 +9,31 @@ public class ModuloTemperatura {
     public ArCondicionado arCondicionado;
     public SensorTemperatura sensorTemperatura;
     
+    public ModuloTemperatura(){
+        
+    }
     public ModuloTemperatura(SensorTemperatura temperatura){
         arCondicionado = new ArCondicionado();
-        sensorTemperatura = new SensorTemperatura(sensorTemperatura.temperatura);
+        sensorTemperatura = new SensorTemperatura(temperatura.temperatura);
+    }
+    
+    public void setSensorTempON(boolean onOFF){
+        sensorTemperatura.setIsActivo(onOFF);
     }
     
     public int getTemperatura(){
-       return sensorTemperatura.temperatura; 
+       return sensorTemperatura.temperatura;
+    }
+    
+    public boolean getStatusSensor(){
+        return sensorTemperatura.getStatusSensorTemp();
+    }
+    
+    public boolean getStatusArCondicionado(){
+        return arCondicionado.getStatus();
     }
     
     public void medirTemperatura(int temp, int variacao){
-        while (sensorTemperatura.temperatura != temp)
         if(sensorTemperatura.temperatura < arCondicionado.getTempMin()){
             arCondicionado.setIsLigado(true);
         } else if(sensorTemperatura.temperatura > arCondicionado.getTempMax()) {

@@ -1,11 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projecto;
-
-import java.util.Random;
 
 /*
 * Projecto SmartHome 1.0
@@ -13,7 +6,7 @@ import java.util.Random;
 * @author Bruno Luis - 170221066
 */
 public class SensorTemperatura implements Sensores {
-    public static final int MAX_TEMP = 20;
+    
     public Tomada tomada;
     public boolean isActivo;
     public int temperatura;
@@ -22,16 +15,19 @@ public class SensorTemperatura implements Sensores {
         tomada = new Tomada();
         isActivo = false;
         this.temperatura = temperatura;
-     }
+    }
         
     public boolean temEnergia() {
         if(tomada.getIsLigado() == true){
             return true;
-        }else{
-            return false;
-        }
+        }else
+            return false;    
     }
-
+    
+    public int getTemperatura(){
+        return temperatura;
+    }
+    
     public void setIsActivo(boolean isActivo) {
         if(temEnergia() == true){
             this.isActivo = isActivo;
@@ -39,7 +35,8 @@ public class SensorTemperatura implements Sensores {
             this.isActivo = false;
         }
     }
-    public boolean getIsActivo() {
+    
+    public boolean getStatusSensorTemp() {
         return isActivo;
     }
 }

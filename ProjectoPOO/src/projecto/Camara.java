@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projecto;
 
 /*
@@ -18,19 +13,21 @@ public class Camara implements Atuadores  {
  * 
  * @param foto 
  */
-    public Camara(String foto){
-        this.foto = foto.concat(".jpg");
+    public Camara(){
+        this.foto = "XXXX";
     }
 /**
  * Retorna o valor de foto implementado pelo  utilizador.
- *
  * @return foto
 */
     public String getFoto() {
         return foto;
-    }    
-    
-    
+    }
+   
+    public void tirarFotos(String name){
+      this.foto = name.concat(".jpg");
+    }
+   
     @Override
     public void setIsLigado(boolean ligado) {
     }

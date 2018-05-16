@@ -1,13 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package projecto;
 
+/*
+* Projecto SmartHome 1.0
+* @author Bruno Selistre - 170221068
+* @author Bruno Luis - 170221066
+*/
 /**
- *
- * @author micol
+ * Classe do tipo ENUM para representar as divisões de uma casa. Serve para dar apoio á classe Divisão.
  */
 public enum TipoDivisao {
     QUARTO, SALA, CASA_DE_BANHO, COZINHA 
