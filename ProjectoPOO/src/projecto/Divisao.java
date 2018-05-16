@@ -38,7 +38,7 @@ public class Divisao {
     /**
      * Divisão da casa onde apenas tem modulo de Luz e Alarme.
      * @param moduloLuz
-     * @param moduloAlarme
+     * @param moduloAlarme 
      * @param divisao 
      */
     public Divisao(ModuloLuminosidade moduloLuz ,ModuloAlarme moduloAlarme, TipoDivisao divisao ){
@@ -127,8 +127,8 @@ public class Divisao {
     }
     /**
      * Método que mede a luz segundo os valores que o utilizador coloca.
-     * @param pouca
-     * @param muita 
+     * @param muito
+     * @param pouco 
      */
     public void medirLuz(int muito, int pouco){
           moduloLuz.medirLuminosidade(muito, pouco);

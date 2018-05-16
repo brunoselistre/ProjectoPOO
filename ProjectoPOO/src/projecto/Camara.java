@@ -10,8 +10,6 @@ public class Camara implements Atuadores  {
     private String foto;
 /**
  * Constructor onde vai receber uma foto por nome de string e sempre adiciona automaticamente o tipo de ficheiro, que neste caso é sempre .jpg.
- * 
- * @param foto 
  */
     public Camara(){
         this.foto = "XXXX";

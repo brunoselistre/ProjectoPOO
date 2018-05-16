@@ -42,7 +42,7 @@ public class Lampada implements Atuadores{
     }
 /**
  * Método onde vai definir o valor de luminosidade da lâmpada.
- * @param luz 
+ * @param potencia 
  */
     @Override
     public void setValor(double potencia) {
