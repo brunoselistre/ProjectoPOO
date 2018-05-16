@@ -13,7 +13,7 @@ public class Programa {
         Lampada lampada = new Lampada();
         ArCondicionado ar = new ArCondicionado();
         
-        SensorLuminosidade sensorluz1 = new SensorLuminosidade(98);
+        SensorLuminosidade sensorluz1 = new SensorLuminosidade(89);
         SensorLuminosidade sensorluz2 = new SensorLuminosidade(50);
         SensorLuminosidade sensorluz3 = new SensorLuminosidade(10);
         
@@ -24,9 +24,9 @@ public class Programa {
         sensortemp2.setIsActivo(true);
         sensortemp3.setIsActivo(true);
         
-        ModuloLuminosidade luminosidade1 = new ModuloLuminosidade(sensorluz1.luzAmbiente);
-        ModuloLuminosidade luminosidade2 = new ModuloLuminosidade(sensorluz2.luzAmbiente);
-        ModuloLuminosidade luminosidade3 = new ModuloLuminosidade(sensorluz3.luzAmbiente);
+        ModuloLuminosidade luminosidade1 = new ModuloLuminosidade(sensorluz1.getLuzAmbiente());
+        ModuloLuminosidade luminosidade2 = new ModuloLuminosidade(sensorluz2.getLuzAmbiente());
+        ModuloLuminosidade luminosidade3 = new ModuloLuminosidade(sensorluz3.getLuzAmbiente());
         
         ModuloTemperatura temperatura1 = new ModuloTemperatura(sensortemp1);
         ModuloTemperatura temperatura2 = new ModuloTemperatura(sensortemp2);
@@ -52,20 +52,28 @@ public class Programa {
         divisao2.ligarAlarme();
         divisao3.ligarAlarme();
         
-        divisao2.ligarLampada(true);
-        divisao1.ligarLampada(true);
+        divisao2.ligarLamp();
+        divisao1.ligarLamp();
         
-        System.out.println("A casa tem : " + consola.getNummeroDivisoes() + " divisões.");
+        System.out.println(consola.toString());
                 
-        System.out.println("O estado do alarme é: " +divisao4.getAlarmeStatus());
-        System.out.println("O estado do alarme é: " +divisao2.getStatusLampada());
+        System.out.println("O estado do alarme da cozinha é: " +divisao4.getAlarmeStatus());
+        System.out.println("O estado do alarme da sala é: " +divisao2.getStatusLampada());
+        divisao1.medirLuz(85,60);
+        System.out.println("O valor da Luz Ambiente é de: " +divisao1.getLuzAmbiente());
+        divisao1.ligarLamp();
+        System.out.println("O estado da Lampada da Casa de Banho é: " +divisao1.getStatusLampada());
         
-        consola.autoLuz(70, 90);
-        System.out.println("O estado da lampada é: " +divisao2.getStatusLampada());
-        System.out.println("O estado da lampada é: " +divisao3.getStatusLampada());
+        divisao1.desligarLuz();
+        System.out.println("Agora o estado da Lampada da Casa de Banho é: " +divisao1.getStatusLampada());
         
+        System.out.println("O estado da lampada da Sala é: " +divisao2.getStatusLampada());
+        System.out.println("O estado da lampada do quarto é: " +divisao3.getStatusLampada());
         
-        System.out.println("O sensor de movimento está: " +divisao3.getMovStatus());
+        divisao2.medirTemperatura(18, 2);
+        divisao2.intensidadeLuz(5);
+        System.out.println("O valor da lampada na Sala é de: " + divisao2.getLuzLampada());
+        System.out.println("O sensor de movimento da sala está: " +divisao3.getMovStatus());
         
         
         

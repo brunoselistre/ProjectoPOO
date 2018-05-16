@@ -118,24 +118,47 @@ public class Divisao {
     public double getLuzLampada(){
         return moduloLuz.getLuzLampada();
     }
-    
+    /**
+     * Método que devolve o estado da Lampada.
+     * @return moduloLuz.getStatusLamp();
+     */      
     public boolean getStatusLampada(){
         return moduloLuz.getStatusLamp();
     }
-    
-    public void medirLuz(int pouca, int muita){
-          moduloLuz.medirLuminosidade(pouca, muita);
+    /**
+     * Método que mede a luz segundo os valores que o utilizador coloca.
+     * @param pouca
+     * @param muita 
+     */
+    public void medirLuz(int muito, int pouco){
+          moduloLuz.medirLuminosidade(muito, pouco);
     }
-    
-    public void ligarLampada(boolean onOFF){
-          moduloLuz.ligarLampada(onOFF);
+    /**
+     * Método para ligar a lampada.
+     * 
+     */
+    public void ligarLamp(){
+        moduloLuz.ligarLampada(true);
     }
-      
+      /**
+     * Método para desligar a lampada.
+     * 
+     */
+    public void desligarLuz(){
+        moduloLuz.ligarLampada(false);
+    }
+    /**
+     * Método para ligar a Tomada.
+     * @param tomada 
+     */
     public void ligarTomada(boolean tomada){
           moduloLuz.ligarTomada(tomada);
     }
-      
-    public void controleLampada(int potencia){
+    /**
+     * Método para controla da potencia da lampada.
+     * @param potencia 
+     */
+    public void intensidadeLuz(int potencia){
           moduloLuz.controleLampada(potencia);
     } 
     //Alarme

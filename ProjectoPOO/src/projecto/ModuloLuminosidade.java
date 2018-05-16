@@ -17,6 +17,7 @@ public class ModuloLuminosidade {
     }
     public ModuloLuminosidade(int luzAmbiente){
         luz = new SensorLuminosidade(luzAmbiente);
+        this.luz.luzAmbiente = luzAmbiente;
         tomada = new Tomada();
         lampada = new Lampada();
     }
@@ -46,10 +47,11 @@ public class ModuloLuminosidade {
         return ligado;
     }
     
-    public void medirLuminosidade(int pouca, int muita){
-        if(luz.luzAmbiente > pouca){
+    public void medirLuminosidade(int muito, int pouco){
+        lampada.setIsLigado(true);
+        if(luz.getLuzAmbiente() > muito){
             lampada.setIsLigado(false); //LAMPADA APAGADA
-        }else if (luz.luzAmbiente < muita){
+        }else if (luz.getLuzAmbiente() < pouco){
             lampada.setIsLigado(true); //LAMPADA ACESA
         }
     }
